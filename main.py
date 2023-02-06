@@ -29,7 +29,7 @@ def watch_course(browser):
         sub_text = text.split("/")
         if int(sub_text[0])<int(sub_text[1]):
 
-            for _ in tqdm(range(int(sub_text[1])-int(sub_text[0]))):
+            for _ in range(int(sub_text[1])-int(sub_text[0])):
                 #//*[@id="app"]/div/div[1]/div[4]/div/div/ul/li[1]/div/div[2]/a
                 browser.find_element("xpath", "//*[@id='app']/div/div[1]/div[4]/div/div/ul/li[" + str(idx + 1) + "]/div/div[2]/a").click()
                 time.sleep(SLEEP_TIME*1)
@@ -61,7 +61,7 @@ def watch_course(browser):
         text = browser.find_element("xpath", "//*[@id='app']/div/div[1]/div[5]/div/div/ul/li["+str(idx+1)+"]/div/div[1]/div").text
         sub_text = text.split("/")
         if int(sub_text[0])<int(sub_text[1]):
-            for _ in tqdm(range(int(sub_text[1])-int(sub_text[0]))):
+            for _ in range(int(sub_text[1])-int(sub_text[0])):
                 browser.find_element("xpath", "//*[@id='app']/div/div[1]/div[5]/div/div/ul/li[" + str(idx + 1) + "]/div/div[2]/a").click()
                 time.sleep(SLEEP_TIME*1)
                 browser.find_element("xpath", "//*[@id='app']/div/div[1]/ul/li[1]/div").click()
